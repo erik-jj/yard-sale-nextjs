@@ -1,52 +1,71 @@
 import React from 'react';
 import styles from '@styles/MobileMenu.module.scss';
+import Link from 'next/link';
 
 const MobileMenu = () => {
   return (
-    <div className={styles.MobileMenu}>
+    <div className={styles['mobile-menu']}>
       <ul>
         <li>
-          <a href="/">CATEGORIES</a>
+          <Link href="/">
+            <a>CATEGORIES</a>
+          </Link>
         </li>
         <li>
-          <a href="/">All</a>
+          <Link href="/">
+            <a>All</a>
+          </Link>
         </li>
         <li>
-          <a href="/">Clothes</a>
+          <Link href="/">
+            <a>Clothes</a>
+          </Link>
         </li>
         <li>
-          <a href="/">Electronics</a>
+          <Link href="/">
+            <a>Electronics</a>
+          </Link>
         </li>
         <li>
-          <a href="/">Fornitures</a>
+          <Link href="/">
+            <a>Fornitures</a>
+          </Link>
         </li>
         <li>
-          <a href="/">Toys</a>
+          <Link href="/">
+            <a>Toys</a>
+          </Link>
         </li>
         <li>
-          <a href="/">Others</a>
+          <Link href="/">
+            <a>Others</a>
+          </Link>
         </li>
       </ul>
 
       <ul>
         <li>
-          <a href="/">My orders</a>
+          <Link href="/">
+            <a>My orders</a>
+          </Link>
         </li>
         <li>
-          <a href="/">My account</a>
+          <Link href="/">
+            <a>My account</a>
+          </Link>
         </li>
       </ul>
 
       <ul>
         <li>
-          <a href="/" class="email">
-            email@example.com
-          </a>
+          <Link href="/">
+            <a className={styles.email}>email@example.com</a>
+          </Link>
         </li>
         <li>
-          <a href="/" class="sign-out">
-            Sign Out
-          </a>
+          <Link href="/">
+            <a className={styles['sign-out']}> Sign Out </a>
+          </Link>
         </li>
       </ul>
     </div>

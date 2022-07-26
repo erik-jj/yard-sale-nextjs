@@ -3,6 +3,7 @@ import OrderItem from '../components/OrderItem';
 import AppContext from '../context/AppContext';
 import arrowImage from '../assets/icons/flechita.svg';
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from '@styles/MyOrder.module.scss';
 const MyOrder = (props) => {
   const { state } = useContext(AppContext);
@@ -18,23 +19,25 @@ const MyOrder = (props) => {
 
   return (
     <aside className={styles.MyOrder}>
-      <div className="title-container">
+      <div className={styles['title-container']}>
         <Image src={arrowImage} alt="arrow" onClick={() => handleCloseView()} />
-        <p className="title">My order</p>
+        <p className={styles.title}>My order</p>
       </div>
-      <div className="my-order-content">
-        <div className="order-container">
+      <div className={styles['my-order-content']}>
+        <div className={styles['order-container']}>
           {state.cart.map((product) => (
             <OrderItem product={product} key={`orderItem-${product.id}`} />
           ))}
         </div>
-        <div className="order">
+        <div className={styles.order}>
           <p>
             <span>Total:</span>
           </p>
           <p>${sumTotal()}</p>
         </div>
-        <button className="primary-button">Checkout</button>
+        <Link href="/checkout">
+          <button className={styles['primary-button']}>Checkout</button>
+        </Link>
       </div>
     </aside>
   );

@@ -9,14 +9,16 @@ const ProductItem = ({ product }) => {
   const { state, addToCart } = useContext(AppContext);
 
   const handleClick = (item) => {
-    isProductAdded(item) ? alert('The product has already been added') : addToCart(item);
+    isProductAdded(item.id) ? alert('The product has already been added') : addToCart(item);
   };
 
-  const isProductAdded = (item) => (state.cart.includes(item) ? true : false);
+  const isProductAdded = (id) => {
+    return state.cart.some((e) => e.id === id);
+  };
 
   return (
     <div className={styles.ProductItem}>
-      <Image loader={() => product.images[0]} src={product.images[0]} alt={product.title} width={500} height={500} />
+      <Image loader={() => product.images[0]} src={product.images[0]} alt={product.title} width={240} height={240} />
       <div className={styles['product-info']}>
         <div>
           <p>${product.price}</p>
@@ -28,7 +30,7 @@ const ProductItem = ({ product }) => {
             handleClick(product);
           }}
         >
-          <Image src={isProductAdded(product) ? addedToCartImage : addToCartImage} alt="add-to-cart" />
+          <Image src={isProductAdded(product.id) ? addedToCartImage : addToCartImage} alt="add-to-cart" />
         </figure>
       </div>
     </div>
