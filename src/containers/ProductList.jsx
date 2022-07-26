@@ -1,11 +1,11 @@
 import React from 'react';
 import ProductItem from '@components/ProductItem';
-import useGetProducts from '@hooks/useGetProducts';
+import UseGetProducts from '@hooks/UseGetProducts';
 const API = 'https://api.escuelajs.co/api/v1/products';
 import styles from '@styles/ProductList.module.scss';
 
 const ProductList = () => {
-  const products = useGetProducts(API);
+  const products = UseGetProducts(API);
 
   return (
     <section className={styles['main-container']}>
