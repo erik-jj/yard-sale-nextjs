@@ -38,22 +38,34 @@ const Header = () => {
         </Link>
         <ul>
           <li>
-            <a href="/">All</a>
+            <Link href="/">
+              <a>All</a>
+            </Link>
           </li>
           <li>
-            <a href="/">Clothes</a>
+            <Link href="/">
+              <a>Clothes</a>
+            </Link>
           </li>
           <li>
-            <a href="/">Electronics</a>
+            <Link href="/">
+              <a>Electronics</a>
+            </Link>
           </li>
           <li>
-            <a href="/">Furnitures</a>
+            <Link href="/">
+              <a>Furnitures</a>
+            </Link>
           </li>
           <li>
-            <a href="/">Toys</a>
+            <Link href="/">
+              <a>Toys</a>
+            </Link>
           </li>
           <li>
-            <a href="/">Others</a>
+            <Link href="/">
+              <a>Others</a>
+            </Link>
           </li>
         </ul>
       </div>

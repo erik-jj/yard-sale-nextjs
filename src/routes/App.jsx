@@ -13,9 +13,9 @@ import NotFound from '../pages/NotFound';
 import '../styles/global.css';
 import CreateAccount from '../pages/CreateAccount';
 import AppContext from '../context/AppContext';
-import useInitialState from '../hooks/useInitialState';
+import UseInitialState from '../hooks/UseInitialState';
 const app = () => {
-  const initialState = useInitialState();
+  const initialState = UseInitialState();
   return (
     <AppContext.Provider value={initialState}>
       <BrowserRouter>

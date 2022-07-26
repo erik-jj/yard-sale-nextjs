@@ -1,4 +1,3 @@
-
 import AppContext from '@context/AppContext';
 import useInitialState from '@hooks/useInitialState';
 import Header from '@components/Header';
